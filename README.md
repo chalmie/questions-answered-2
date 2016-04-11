@@ -1,3 +1,6 @@
+##Perry 
+Sorry this is barebones and ugly. Got ambitious and spent thurs,fri,sat getting user authentication working, but couldn't get sessions working across multiple routes or my models to connect properly with users. Soooo, you're stuck with this. :/
+
 # Questions-answered
 
 Users can submit questions and answer the questions of other users.
@@ -22,7 +25,7 @@ You will need the following things properly installed on your computer.
 ## Running / Development
 
 * Create a new app at firebase.com
-* Edit the following line in config/environment.js to match the name of the app you've created at firebase.com: 
+* Edit the following line in config/environment.js to match the name of the app you've created at firebase.com:
   * firebase: 'https://APP-NAME.firebaseio.com/'
 * `ember server`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
@@ -54,4 +57,3 @@ _If you have any questions, concerns, or feedback, please contact the authors th
 MIT License.
 
 Copyright (c) 2016 **_Blair Peterson_**
-
