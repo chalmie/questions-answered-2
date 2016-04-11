@@ -1,12 +1,15 @@
-<h3>Answers to the question: {{answer.post.question}} </h3>
 
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">{{answer.author}}</h3>
+{{#each sortedAnswers as |answer|}}
+  <h3>Answers to the question: {{answer.post.question}} </h3>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{answer.author}}</h3>
+    </div>
+    <div class="panel-body">
+      {{answer.solution}}
+      <br>
+      {{answer.posting_date}}
+    </div>
   </div>
-  <div class="panel-body">
-    {{answer.solution}}
-    <br>
-    {{answer.posting_date}}
-  </div>
-</div>
+{{/each}}
