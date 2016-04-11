@@ -21,8 +21,15 @@
             {{/link-to}}
             <br>
             {{post.posting_date}}
+            <button {{action 'addToSavedPosts' post}}>Add to Saved Posts</button>
           </div>
         </div>
       {{/each}}
+    </ul>
+  </div>
+  <div class="container saved-posts">
+    <h3>Saved Posts</h3>
+    <ul>
+      {{display-savedposts}}
     </ul>
   </div>

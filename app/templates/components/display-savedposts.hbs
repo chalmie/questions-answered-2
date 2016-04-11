@@ -1,0 +1,7 @@
+
+
+  {{#each posts.posts as |post|}}
+    <p>{{#link-to 'post' post.id}}
+      {{post-close post}} {{post.question}}
+    {{/link-to}}</p>
+  {{/each}}
