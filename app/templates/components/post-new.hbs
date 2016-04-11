@@ -1,0 +1,27 @@
+<div class="container">
+  {{#if addNewPost}}
+     <form class="save-post">
+       <h1>Your Question</h1>
+       <br>
+       <div class="form-group">
+         <label for="author">Author</label>
+         {{input value=author id="author"}}
+       </div>
+
+       <div class="form-group">
+         <label for="question">Question</label>
+         {{input value=question id="question"}}
+       </div>
+
+       <div class="form-group">
+         <label for="detail">Details</label>
+         {{input value=detail id="detail"}}
+       </div>
+
+       <button class="btn btn-lg btn-info"{{action 'savePost' post}}>Save</button>
+     </form>
+
+   {{else}}
+      <button class="btn btn-lg btn-info"{{action 'postFormShow'}}>Ask Away!</button>
+  {{/if}}
+</div>

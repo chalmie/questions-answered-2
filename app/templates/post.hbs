@@ -1,0 +1,21 @@
+<div class="question">
+  <h4> {{model.author}} wants to know:</h4>
+  <h1> {{model.question}} </h1>
+  <p> Extra info: {{model.detail}} </p>
+
+  {{post-solve post=model setAsSolved="setAsSolved"}}
+  {{post-update post=model updatePost="updatePost"}}
+  {{post-delete post=model deletePost="deletePost"}}
+  {{answer-new saveAnswer="saveAnswer" post=model}}
+</div>
+<br>
+
+<div class="answer">
+
+  <br>
+  <ul>
+  {{#each model.answers as |answer|}}
+     {{answer-tile answer=answer}}
+  {{/each}}
+</ul>
+</div>

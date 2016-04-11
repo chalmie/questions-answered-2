@@ -1,0 +1,28 @@
+<div class="header">
+  <h1>Questions Answered</h1>
+</div>
+
+
+
+  {{post-new savePost="savePost"}}
+
+  <div class="container recently-added">
+    <h3>Recently Added Questions</h3>
+
+    <ul>
+      {{#each model.posts as |post|}}
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">{{post.author}}</h3>
+          </div>
+          <div class="panel-body">
+            {{#link-to 'post' post.id}}
+              {{post-close post}} {{post.question}}
+            {{/link-to}}
+            <br>
+            {{post.posting_date}}
+          </div>
+        </div>
+      {{/each}}
+    </ul>
+  </div>
